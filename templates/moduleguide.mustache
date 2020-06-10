@@ -1,0 +1,216 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template theme_uogateen/moduleguidemodal
+
+    uogateen Staff blocks modal display.
+
+    Context variables required for this template:
+        *
+
+    Example context (json):
+    {
+
+    }
+}}
+
+<div class="modalcards moduleguidemodal">
+{{#modulecode}}
+    <div class="card">
+        <div class="card-header card-warning bg-warning">
+            <h6 class="card-title">
+                {{#moduletitle}}
+                    {{{moduletitle}}}
+                {{/moduletitle}}
+            </h6>
+        </div>
+        <p>To expand and view each section, please click the <span class="fa fa-map-o">&nbsp;</span> icon</p>
+        <div class="card-block">
+            <div class="row">
+                {{#modintro}}
+                    <div class="mg-intro col-md-12">
+                    <div class="card">
+                        <div class="card-header text-light bg-primary">
+                            <a href="#modintro" data-toggle="collapse" data-target="#modintro" style="color:#fff; text-decoration:none;">
+                                <h5 style="float:left;" class="card-title">{{#str}}modintrosection, theme_uogateen{{/str}}</h5>
+                            </a>
+                            <a href="#modintro" data-toggle="collapse" data-target="#modintro" style="float:right; color:#fff; text-decoration:none;" class="fa fa-map-o">&nbsp;</a>
+                        </div>
+                        <div id="modintro" class=" collapse show card-block">
+                            {{{modintro}}}
+                        </div>
+                    </div>
+                    </div>
+                {{/modintro}}
+            </div>
+            <div class="row">
+                {{#modval_level}}
+                    <div class="mg-validated col-md-12">
+                    <div class="card ">
+                        <div class="card-header text-light bg-primary">
+                            <a href="#validated" data-toggle="collapse" data-target="#validated" style="color:#fff; text-decoration:none;">
+                                <h5 style="float:left;" class="card-title">{{#str}}validatedsectiontitle, theme_uogateen{{/str}}</h5>
+                            </a>
+                            <a href="#validated" data-toggle="collapse" data-target="#validated" style="float:right; color:#fff; text-decoration:none;" class="fa fa-map-o">&nbsp;</a>
+                        </div>
+                        <div id = "validated" class = "card-block collapse">
+                            <div class="row">
+                                <h6 class="valtitle col-md-3">{{#str}}valtitle, theme_uogateen{{/str}}:</h6>
+                                <h6 class="valdetail col-md-9">{{{moduletitle}}}</h6>
+                            </div>
+                            <div class="row">
+                                <h6 class="valtitle col-md-3">{{#str}}valmc, theme_uogateen{{/str}}:</h6>
+                                <h6 class="valdetail col-md-4">{{{modulecode}}}</h6>
+                                <h6 class="valtitle col-md-3">{{#str}}valyear, theme_uogateen{{/str}}:</h6>
+                                <h6 class="valdetail col-md-2">{{{modval_year}}}</h6>
+                            </div>
+                            <div class="row modguidedivider">
+                                <p><br></p>
+                            </div>
+                            <div class="row">
+                                <h6 class="valtitle col-md-3">{{#str}}valschool, theme_uogateen{{/str}}:</h6>
+                                <div class="valdetail col-md-9">{{{modval_school}}}</div>
+                            </div>
+                            <div class="row">
+                            </div>
+                            <div class="row">
+                                <h6 class="valtitle col-md-3">{{#str}}vallevel, theme_uogateen{{/str}}:</h6>
+                                <div class="valdetail col-md-4">{{{modval_level}}}</div>
+                                <h6 class="valtitle col-md-3">{{#str}}valcat, theme_uogateen{{/str}}:</h6>
+                                <div class="valdetail col-md-2">{{{modval_catpoints}}}</div>
+                            </div>
+                            <div class="row">
+                                <h6 class="valtitle col-md-3">{{#str}}valpre, theme_uogateen{{/str}}:</h6>
+                                <div class="valdetail col-md-9">{{{modval_prerequ}}}</div>
+                            </div>
+                            <div class="row">
+                                <h6 class="valtitle col-md-3">{{#str}}valco, theme_uogateen{{/str}}:</h6>
+                                <div class="valdetail col-md-9">{{{modval_corequ}}}</div>
+                            </div>
+                            <div class="row">
+                                <h6 class="valtitle col-md-3">{{#str}}valrestrict, theme_uogateen{{/str}}:</h6>
+                                <div class="valdetail col-md-9">{{{modval_restrictions}}}</div>
+                            </div>
+                            <p><br></p>
+                            <div class="row">
+                                <h6 class="valtitle col-md-3">{{#str}}valdesc, theme_uogateen{{/str}}:</h6>
+                                <div class="valdetail col-md-9">{{{modval_desc}}}</div>
+                            </div>
+                            <div class="row">
+                                <h6 class="valtitle col-md-3">{{#str}}valsyl, theme_uogateen{{/str}}:</h6>
+                                <div class="valdetail col-md-9">{{{modval_syll}}}</div>
+                            </div>
+                            <div class="row">
+                                <h6 class="valtitle col-md-3">{{#str}}vallo, theme_uogateen{{/str}}:</h6>
+                                <div class="valdetail col-md-9">{{{modval_lo}}}</div>
+                            </div>
+                            <div class="row">
+                                <h6 class="valtitle col-md-3">{{#str}}valassessments, theme_uogateen{{/str}}:</h6>
+                                <div class="valdetail col-md-9">{{{modval_assess}}}</div>
+                            </div>
+
+                            <div class="row">
+                                <h6 class="valtitle col-md-3">{{#str}}vallt, theme_uogateen{{/str}}:</h6>
+                                <div class="valdetail col-md-9">{{{modval_activities}}}</div>
+                            </div>
+                            <div class="row">
+                                <h6 class="valtitle col-md-3">{{#str}}valspecass, theme_uogateen{{/str}}:</h6>
+                                <div class="valdetail col-md-9">{{{modval_specass}}}</div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                {{/modval_level}}
+            </div>
+            <div class="row">
+                {{#modstructure}}
+                    <div class="mg-structure col-md-12">
+                    <div class="card">
+                        <div class="card-header text-light  bg-primary">
+                            <a href="#modstructurecontent" data-toggle="collapse" data-target="#modstructurecontent" style="color:#fff; text-decoration:none;">
+                                <h5 style="float:left;" class="card-title">Module Content</h5>
+                            </a>
+                            <a href="#modstructurecontent" data-toggle="collapse" data-target="#modstructurecontent" style="float:right; color:#fff; text-decoration:none;" class="fa fa-map-o">&nbsp;</a>
+                        </div>
+                        <div id = "modstructurecontent" class = "card-block collapse">
+                            {{#modstructurecontent}} {{{modstructurecontent}}} {{/modstructurecontent}}
+                            <p><br></p>
+                            <h4>MyGlos link</h4>
+                            {{#modtimetableurl}}
+                                <a href="{{{modtimetableurl}}}" title="Timetable link">You can find your weekly timetable on your MyGlos page</a>
+                            {{/modtimetableurl}}
+                        </div>
+                    </div>
+                    </div>
+                {{/modstructure}}
+            </div>
+            <div class = "row">
+                {{#modassessments}}
+                    <div class="mg-assessment col-md-12">
+                        <div class="card">
+                            <div class="card-header text-light bg-primary">
+                                <a href="#modassessments" data-toggle="collapse" data-target="#modassessments" style="color:#fff; text-decoration:none;">
+                                    <h5 style="float:left;" class="card-title">{{#str}}valassessments, theme_uogateen{{/str}}</h5>
+                                </a>
+                                <a href="#modassessments" data-toggle="collapse" data-target="#modassessments" style="float:right; color:#fff; text-decoration:none;" class="fa fa-map-o">&nbsp;</a>
+                            </div>
+                        <div id = "modassessments" class = "card-block collapse">
+                                {{{modassessments}}}
+                            </div> {{! Needed as it closes Div in include }}
+                        </div>
+                    </div>
+                {{/modassessments}}
+            </div>
+            <div class = "row">
+                {{#modaddinfo}}
+                    <div class="mg-addinfo col-md-12">
+                    <div class="card">
+                        <div class="card-header text-light bg-primary">
+                            <a href="#modaddinfo" data-toggle="collapse" data-target="#modaddinfo" style="color:#fff; text-decoration:none;">
+                                <h5 style="float:left;" class="card-title">{{#str}}modaddinfo, theme_uogateen{{/str}}</h5>
+                            </a>
+                            <a href="#modaddinfo" data-toggle="collapse" data-target="#modaddinfo" style="float:right; color:#fff; text-decoration:none;" class="fa fa-map-o">&nbsp;</a>
+                        </div>
+                        <div id = "modaddinfo" class = "card-block collapse">
+                            {{{modaddinfo}}}
+                        </div>
+                    </div>
+                    </div>
+                {{/modaddinfo}}
+            </div>
+            <div class = "row">
+                {{#modresource}}
+                    <div class="mg-resources col-md-12">
+                    <div class="card">
+                        <div class="card-header text-light bg-primary">
+                            <a href="#modresource" data-toggle="collapse" data-target="#modresource" style="color:#fff; text-decoration:none;">
+                            <h5 style="float:left;" class="card-title">{{#str}}valres, theme_uogateen{{/str}}</h5>
+                            </a>
+                            <a href="#modresource" data-toggle="collapse" data-target="#modresource" style="float:right; color:#fff; text-decoration:none;" class="fa fa-map-o">&nbsp;</a>
+                        </div>
+                        <div id = "modresource" class = "card-block collapse">
+                            {{{modresource}}}
+                        </div>
+                    </div>
+                    </div>
+                {{/modresource}}
+            </div>
+        </div>
+    </div>
+{{/modulecode}}
+</div>
+

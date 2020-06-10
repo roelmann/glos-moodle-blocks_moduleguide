@@ -1,0 +1,89 @@
+/** This file is part of Moodle - http://moodle.org/
+//
+// Moodle is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Moodle is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+ */
+/**
+ * CSS styles file.
+ *
+ * @package    block_moduleguide
+ * @copyright  2019 Richard Oelmann
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+aside#block-region-side-top section.block_moduleguide {max-width:25%;}
+.block_moduleguide .card-body.p-3 {padding:0 !important;}
+.block_moduleguide .card-text.mt-3 {margin-top:0 !important;}
+
+.moduleguidetext{
+    font-weight: 700;
+    background-image: url([[pix:block_moduleguide|BlockLinkCornerBg]]);
+    background-position:right bottom;
+    background-repeat:no-repeat;
+    color:#fff;
+    padding-bottom:1rem;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center
+}
+
+.block_moduleguide .moduleguidetext {background-color:#ff8118}
+.block_moduleguide:hover .moduleguidetext{ background-image: url([[pix:block_moduleguide|BlockLinkCornerBgHover]]);}
+
+.block_moduleguide div {width:100%;}
+.block_moduleguide div input[type="image"] {width:100%;padding-bottom:1rem;height:15rem;}
+.block_moduleguide a .moduleguidetext {bottom:0;height:3.5rem;}
+.block_moduleguide input:hover {cursor: pointer !important;}
+
+@media screen and (max-width: 1024px) {
+    .block_moduleguide a img {height:12rem;}
+    .block_moduleguide a .moduleguidetext {bottom:0;height:3rem;}
+    .moduleguidetext {font-weight: 500; font-size:.8rem;margin-bottom:0;padding-bottom:0;}
+}
+@media screen and (max-width: 641px) {
+    .block_moduleguide a img {height:8rem;}
+    .block_moduleguide a .supportblocktext {bottom:0;height:3rem;}
+    .block_moduleguide a .moduleguidetext {font-size:.6rem;}
+}
+
+.blocklink {
+  flex: 1 0 auto;
+  margin: 3px;
+    min-width:180px;
+    height:150px;
+}
+.blocklink:nth-of-type(6n) {background-color:#f72c88;background-image: radial-gradient(ellipse at center,rgba(255,255,255,.3),rgba(0,0,0,.3));}
+.blocklink:nth-of-type(6n+1) {background-color:#e93b20;background-image: radial-gradient(ellipse at center,rgba(255,255,255,.3),rgba(0,0,0,.3));}
+.blocklink:nth-of-type(6n+2) {background-color:#991401;background-image: radial-gradient(ellipse at center,rgba(255,255,255,.3),rgba(0,0,0,.3));}
+.blocklink:nth-of-type(6n+3) {background-color:#a3ca39;background-image: radial-gradient(ellipse at center,rgba(255,255,255,.3),rgba(0,0,0,.3));}
+.blocklink:nth-of-type(6n+4) {background-color:#00abbf;background-image: radial-gradient(ellipse at center,rgba(255,255,255,.3),rgba(0,0,0,.3));}
+.blocklink:nth-of-type(6n+5) {background-color:#ff8118;background-image: radial-gradient(ellipse at center,rgba(255,255,255,.3),rgba(0,0,0,.3));}
+
+
+.blocklink span {
+    text-align:center;
+    width:100%;
+    color:#fff;
+}
+.blocklink p {
+    font-size:120%;
+    font-weight:500;
+    padding: 3px 3px 0 3px;
+    color:rgba(255,255,255,0.8);
+}
+#page-blocks-moduleguide-pages-moduleguide h5{color:#fff}
+#page-blocks-moduleguide-pages-modguide_full #region-main .card-body {padding: 0}
+#page-blocks-moduleguide-pages-modguide_full #region-main .card {border: none}
+#page-blocks-moduleguide-pages-modguide_full #region-main .card-body div[role=main] .card-body {padding: 1.25rem}
+#page-blocks-moduleguide-pages-modguide_full #region-main .card-body div[role=main] .card {border: 1px solid rgba(0,0,0,.125);}
+#page-blocks-moduleguide-pages-modguide_full h5{color:#fff}
